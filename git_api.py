@@ -218,13 +218,13 @@ def GA1_13(question):
         print("No email found")
     github_replace_text(
         token=token,
-        repo="Tusharisme/tds",
+        repo="Rajesh4Github/TDS_project2_f",
         file_path="email.json",
         pattern=r'"\s*email\s*"\s*:\s*"[^"]+"',
         replacement=f'"email": "{email}"',
     )
     print("Email updated in email.json")
-    return "https://raw.githubusercontent.com/Tusharisme/tds/refs/heads/main/email.json"
+    return "https://raw.githubusercontent.com/Rajesh4Github/TDS_project2_f/refs/heads/main/email.json"
 
 
 def GA2_3(question):
@@ -238,17 +238,17 @@ def GA2_3(question):
     pattern = r"\b([\w.+-]+)@ds\.study\.iitm\.ac\.in\b"
     github_replace_text(
         token=token,
-        repo="Telvinvarghese/website",
+        repo="Rajesh4Github/TDS_project2_f",
         file_path="index.html",
         pattern=pattern,
         replacement=email,
     )
     print("Email updated in index.html")
     trigger_github_workflow(
-        token=token, repo="Telvinvarghese/website", workflow_file="daily_commit.yml"
+        token=token, repo="Rajesh4Github/TDS_project2_f", workflow_file="daily_commit.yml"
     )  # Trigger the workflow after
     time.sleep(15)
-    return "https://telvinvarghese.github.io/website/?v=1"
+    return "https://Rajesh4Github.github.io/website/?v=1"
 
 
 async def GA2_6_file(file: UploadFile = File(...)):
@@ -261,7 +261,7 @@ async def GA2_6_file(file: UploadFile = File(...)):
 
     # Upload the file to GitHub
     response = github_write_file(
-        token, "Telvinvarghese/api", file_path_on_github, file_content
+        token, "Rajesh4Github/api", file_path_on_github, file_content
     )
 
     print({"message": "File uploaded successfully!", "github_response": response})
@@ -279,7 +279,7 @@ async def GA2_9_file(file: UploadFile = File(...)):
 
     # Upload the file to GitHub
     response = github_write_file(
-        token, "Telvinvarghese/tds_ga2_9", file_path_on_github, file_content
+        token, "Rajesh4Github/tds_ga2_9", file_path_on_github, file_content
     )
 
     print({"message": "File uploaded successfully!", "github_response": response})
@@ -298,41 +298,41 @@ def GA2_7(question):
     pattern = r"\b([\w.+-]+)@ds\.study\.iitm\.ac\.in\b"
     github_replace_text(
         token=token,
-        repo="Telvinvarghese/Test",
+        repo="Rajesh4Github/Test",
         file_path=".github/workflows/Daily_Commit.yml",
         pattern=pattern,
         replacement=email,
     )
     print("Email updated in Daily_Commit.yml")
     trigger_github_workflow(
-        token=token, repo="Telvinvarghese/Test", workflow_file="Daily_Commit.yml"
+        token=token, repo="Rajesh4Github/Test", workflow_file="Daily_Commit.yml"
     )
     time.sleep(15)
-    return "https://github.com/Telvinvarghese/Test"
+    return "https://github.com/Rajesh4Github/Test"
 
 
 def GA4_8(question):
-    return "https://github.com/Tusharisme/tds"
+    return "https://github.com/Rajesh4Github/tds"
 
 
 # GA1_13("""pre-commit: Git hooks
-# Let's make sure you know how to use GitHub. Create a GitHub account if you don't have one. Create a new public repository. Commit a single JSON file called email.json with the value {"email": "22f2001640@ds.study.iitm.ac.in"} and push it.
+# Let's make sure you know how to use GitHub. Create a GitHub account if you don't have one. Create a new public repository. Commit a single JSON file called email.json with the value {"email": "23ds2000138@ds.study.iitm.ac.in"} and push it.
 
 # Enter the raw Github URL of email.json so we can verify it. (It might look like https://raw.githubusercontent.com/[GITHUB ID]/[REPO NAME]/main/email.json.)""")
 
-# GA2_3("""Publish a page using GitHub Pages that showcases your work. Ensure that your email address 22f2001640@ds.study.iitm.ac.in is in the page's HTML.
+# GA2_3("""Publish a page using GitHub Pages that showcases your work. Ensure that your email address 23ds2000138@ds.study.iitm.ac.in is in the page's HTML.
 
 # GitHub pages are served via CloudFlare which obfuscates emails. So, wrap your email address inside a:
 
-# <!--email_off-->22f2001640@ds.study.iitm.ac.in<!--/email_off-->
+# <!--email_off-->23ds2000138@ds.study.iitm.ac.in<!--/email_off-->
 # What is the GitHub Pages URL? It might look like: https://[USER].github.io/[REPO]/""")
 
-# GA2_7("""Create a GitHub action on one of your GitHub repositories. Make sure one of the steps in the action has a name that contains your email address 22f2001640@ds.study.iitm.ac.in. For example:
+# GA2_7("""Create a GitHub action on one of your GitHub repositories. Make sure one of the steps in the action has a name that contains your email address 23ds2000138@ds.study.iitm.ac.in. For example:
 
 # jobs:
 #   test:
 #     steps:
-#       - name: 22f2001640@ds.study.iitm.ac.in
+#       - name: 23ds2000138@ds.study.iitm.ac.in
 #         run: echo "Hello, world!"
 
 # Trigger the action and make sure it is the most recent action.
@@ -343,7 +343,7 @@ def GA4_8(question):
 # Create a scheduled GitHub action that runs daily and adds a commit to your repository. The workflow should:
 
 # Use schedule with cron syntax to run once per day (must use specific hours/minutes, not wildcards)
-# Include a step with your email 22f2001640@ds.study.iitm.ac.in in its name
+# Include a step with your email 23ds2000138@ds.study.iitm.ac.in in its name
 # Create a commit in each run
 # Be located in .github/workflows/ directory
 # After creating the workflow:

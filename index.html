@@ -7,9 +7,9 @@
     <title>TDS Solver</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Set background to red */
+        /* Soft blue background */
         body {
-            background: linear-gradient(to right, #ff0000, #cc0000);
+            background: linear-gradient(to right, #a1c4fd, #c2e9fb); /* Light blue gradient */
             font-family: 'Arial', sans-serif;
             color: #333;
             min-height: 100vh;
@@ -24,35 +24,48 @@
             width: 100%;
         }
 
-        /* Set card background to yellow */
+        /* Muted yellow card */
         .card {
             border-radius: 12px;
             padding: 25px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            background: #ffff00; /* Yellow */
+            background: #fff9db; /* Soft yellow */
         }
 
         h3 {
-            color: #000; /* Black text for contrast */
+            color: #007bff; /* Blue heading for contrast */
         }
 
         textarea {
             resize: vertical;
             height: 200px;
+            background-color: #ffffff; /* White for input fields */
+            color: #333; /* Dark text for readability */
+            border-color: #cccccc; /* Light gray border */
+        }
+
+        textarea::placeholder {
+            color: #888888; /* Gray placeholder text */
+        }
+
+        input[type="file"] {
+            background-color: #ffffff; /* White for input fields */
+            color: #333; /* Dark text for readability */
+            border-color: #cccccc; /* Light gray border */
         }
 
         .btn-success {
-            background-color: #28a745 !important;
+            background-color: #28a745 !important; /* Green button */
             border: none;
             font-size: 18px;
         }
 
         .btn-success:hover {
-            background-color: #218838 !important;
+            background-color: #218838 !important; /* Darker green on hover */
         }
 
         .text-muted {
-            color: #333 !important; /* Darker text for footer */
+            color: #555 !important; /* Slightly darker footer text */
         }
     </style>
 </head>
@@ -60,7 +73,7 @@
 <body>
     <div class="container">
         <div class="card">
-            <h3 class="text-center">Tools in Data Science Graded Assignments Solver</h3>
+            <h3 class="text-center">TDS GA Solver</h3>
             <form id="tds-form">
                 <div class="mb-3">
                     <label for="question" class="form-label">Ask a GA Question:</label>

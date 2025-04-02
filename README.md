@@ -1,4 +1,4 @@
-# TDS Assignment Assistant - Project Documentation
+# TDS Project 2 - Project Documentation
 
 This project is an **LLM-based API application** designed to assist students enrolled in the IIT Madras Online Diploma in Data Science program. The API provides automated answers to questions from five graded assignments in the *Tools in Data Science* course. Below is a detailed description of the process followed during the development and deployment of this project.
 
